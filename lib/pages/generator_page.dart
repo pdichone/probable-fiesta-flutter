@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:word_app/providers/app_state_provider.dart';
 import 'package:word_app/widgets/big_card.dart';
+import 'package:word_app/widgets/history.dart';
 
 class GeneratorPage extends StatelessWidget {
   @override
@@ -20,6 +21,7 @@ class GeneratorPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          Expanded(flex: 5, child: HistoryListview()),
           BigCard(pair: pair),
           SizedBox(height: 10),
           Row(
