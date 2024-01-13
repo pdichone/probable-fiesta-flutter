@@ -83,6 +83,11 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_web_plugins:
+    dependency: transitive
+    description: flutter
+    source: sdk
+    version: "0.0.0"
   lints:
     dependency: transitive
     description:
@@ -208,6 +213,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.0"
+  world_names:
+    dependency: "direct main"
+    description:
+      name: world_names
+      sha256: "97905de3e5d14c4e46d219c267e35e444e8d8480b4297302ccb49e8f522c037f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.0.3"
 sdks:
   dart: ">=3.2.3 <4.0.0"
-  flutter: ">=1.16.0"
+  flutter: ">=1.17.0"

@@ -3,6 +3,7 @@ import 'package:provider/provider.dart';
 import 'package:word_app/providers/app_state_provider.dart';
 import 'package:word_app/widgets/big_card.dart';
 import 'package:word_app/widgets/history.dart';
+import 'package:world_names/world_names.dart';
 
 class GeneratorPage extends StatelessWidget {
   @override

@@ -39,8 +39,8 @@ class _HistoryListviewState extends State<HistoryListview> {
               child: Center(
                 child: TextButton.icon(
                   label: Text(
-                    pair.asPascalCase,
-                    semanticsLabel: pair.asPascalCase,
+                    pair,
+                    //semanticsLabel: pair.asPascalCase,
                   ),
                   icon: appState.favorites.contains(pair)
                       ? Icon(Icons.favorite, size: 12)

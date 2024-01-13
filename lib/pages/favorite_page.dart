@@ -22,26 +22,17 @@ class FavoritesPage extends StatelessWidget {
               '${appState.favorites.length} favorites:'),
         ),
         for (var pair in appState.favorites)
-          Container(
-            decoration: BoxDecoration(
-              border: Border(
-                bottom: BorderSide(
-                  color: theme.colorScheme.primary,
-                ),
-              ),
+          ListTile(
+            leading: IconButton(
+              icon: Icon(Icons.delete_outline, semanticLabel: 'Delete'),
+              color: theme.colorScheme.primary,
+              onPressed: () {
+                appState.removeFavorite(pair);
+              },
             ),
-            child: ListTile(
-              leading: IconButton(
-                icon: Icon(Icons.delete_outline, semanticLabel: 'Delete'),
-                color: theme.colorScheme.primary,
-                onPressed: () {
-                  appState.removeFavorite(pair);
-                },
-              ),
-              title: Text(
-                pair.asLowerCase,
-                semanticsLabel: pair.asPascalCase,
-              ),
+            title: Text(
+              pair,
+              // semanticsLabel: pair.asPascalCase,
             ),
           ),
       ],

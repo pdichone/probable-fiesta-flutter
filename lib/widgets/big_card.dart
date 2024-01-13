@@ -1,4 +1,3 @@
-import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 class BigCard extends StatelessWidget {
@@ -7,25 +6,25 @@ class BigCard extends StatelessWidget {
     required this.pair,
   });
 
-  final WordPair pair;
+  final String pair;
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     // Add style
-    final style = theme.textTheme.displayMedium!.copyWith(
+    final style = theme.textTheme.displaySmall!.copyWith(
       color: theme.colorScheme.onPrimary,
     );
 
     return Card(
       color: theme.colorScheme.primary,
       child: Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(5.0),
         child: Text(
-          pair.asLowerCase,
+          pair,
           style: style,
-          semanticsLabel: "${pair.first} ${pair.second}",
+          //semanticsLabel: "${pair.first} ${pair.second}",
         ),
       ),
     );
